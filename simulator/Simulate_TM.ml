@@ -542,6 +542,8 @@ let simulate_tm (start_scheme:scheme)
                   (* edge capacity can change due to failures *)
                   let current_edge_capacity =
                     (curr_capacity_of_edge topo e failed_links) in
+                  
+                  Printf.printf "%s: %f \n%!" (string_of_edge topo e) (current_edge_capacity)
 
                   (* total ingress traffic on link *)
                   let demand_on_link = List.fold_left in_queue_edge
