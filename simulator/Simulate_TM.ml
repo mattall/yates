@@ -545,6 +545,8 @@ let simulate_tm (start_scheme:scheme)
                   
                   Printf.printf "%s: %f \n%!" (string_of_edge topo e) (current_edge_capacity);
 
+                  Printf.print count_paths_through_edge (scheme);
+
                   (* total ingress traffic on link *)
                   let demand_on_link = List.fold_left in_queue_edge
                       ~init:0.0
